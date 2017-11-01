@@ -29,9 +29,9 @@ function viewCart() {
         let itemName = Object.keys(getCart()[cart.length-2])[0]
         let itemPrice = getCart()[cart.length-2][itemName]
         cartlist = cartlist + " " + itemName + " at $" + itemPrice + " and"
-        let itemName = Object.keys(getCart()[cart.length-1])[0]
-        let itemPrice = getCart()[cart.length-1][itemName]
-        cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
+        let itemName1 = Object.keys(getCart()[cart.length-1])[0]
+        let itemPrice1 = getCart()[cart.length-1][itemName]
+        cartlist = cartlist + " " + itemName1 + " at $" + itemPrice1 + "."
   } else {
       for (var i=0; i<cart.length-2; i++) {
       let itemName = Object.keys(getCart()[i])[0]
