@@ -21,13 +21,11 @@ function viewCart() {
     var cartlist = ""
     if (cart.length === 0) {
     console.log("Your shopping cart is empty.")
-  } else {
-      if (cart.length ===1) {
+  } else if (cart.length ===1) {
         let itemName = Object.keys(getCart()[cart.length-1])[0]
         let itemPrice = getCart()[cart.length-1][itemName]
         cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
-  } else {
-      if (cart.length ===2) {
+  } else if (cart.length ===2) {
         let itemName = Object.keys(getCart()[cart.length-2])[0]
         let itemPrice = getCart()[cart.length-2][itemName]
         cartlist = cartlist + " " + itemName + " at $" + itemPrice + " and"
