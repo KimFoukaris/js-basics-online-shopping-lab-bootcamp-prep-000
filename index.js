@@ -22,21 +22,33 @@ function viewCart() {
     console.log("Your shopping cart is empty.")
   } else {
     var cartlist = ""
+    if (cart.length ===1) {
+      let itemName = Object.keys(getCart()[cart.length-1])[0]
+      let itemPrice = getCart()[cart.length-1][itemName]
+      cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
+  } else {
+    var cartlist = ""
+    if cart.length ===2) {
+      let itemName = Object.keys(getCart()[cart.length-2])[0]
+      let itemPrice = getCart()[cart.length-2][itemName]
+      cartlist = cartlist + " " + itemName + " at $" + itemPrice + " and"
+      let itemName = Object.keys(getCart()[cart.length-1])[0]
+      let itemPrice = getCart()[cart.length-1][itemName]
+      cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
+    } else
+    var cartlist = ""
     for (var i=0; i<cart.length-2; i++) {
       let itemName = Object.keys(getCart()[i])[0]
       let itemPrice = getCart()[i][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + ","
     }
-    if (cart.length>1) {
       let itemName = Object.keys(getCart()[cart.length-2])[0]
       let itemPrice = getCart()[cart.length-2][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + ", and"
-    }
       let itemName = Object.keys(getCart()[cart.length-1])[0]
       let itemPrice = getCart()[cart.length-1][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
     console.log("In your cart, you have" + cartlist)
-    }
 }
 
 function total() {
