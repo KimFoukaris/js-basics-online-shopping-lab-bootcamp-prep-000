@@ -18,17 +18,16 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
+    var cartlist = ""
     if (cart.length === 0) {
     console.log("Your shopping cart is empty.")
   } else {
       if (cart.length ===1) {
-        var cartlist = ""
         let itemName = Object.keys(getCart()[cart.length-1])[0]
         let itemPrice = getCart()[cart.length-1][itemName]
         cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
   } else {
       if (cart.length ===2) {
-        var cartlist = ""
         let itemName = Object.keys(getCart()[cart.length-2])[0]
         let itemPrice = getCart()[cart.length-2][itemName]
         cartlist = cartlist + " " + itemName + " at $" + itemPrice + " and"
@@ -36,20 +35,18 @@ function viewCart() {
         let itemPrice = getCart()[cart.length-1][itemName]
         cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
   } else {
-    var cartlist = ""
-    for (var i=0; i<cart.length-2; i++) {
+      for (var i=0; i<cart.length-2; i++) {
       let itemName = Object.keys(getCart()[i])[0]
       let itemPrice = getCart()[i][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + ","
-    }
       let itemName = Object.keys(getCart()[cart.length-2])[0]
       let itemPrice = getCart()[cart.length-2][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + ", and"
       let itemName = Object.keys(getCart()[cart.length-1])[0]
       let itemPrice = getCart()[cart.length-1][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
-    console.log("In your cart, you have" + cartlist)
   }
+    console.log("In your cart, you have" + cartlist)
 }
 
 function total() {
