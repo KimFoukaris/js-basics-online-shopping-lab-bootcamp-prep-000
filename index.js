@@ -30,7 +30,7 @@ function viewCart() {
         let itemPrice = getCart()[cart.length-2][itemName]
         cartlist = cartlist + " " + itemName + " at $" + itemPrice + " and"
         let itemName1 = Object.keys(getCart()[cart.length-1])[0]
-        let itemPrice1 = getCart()[cart.length-1][itemName]
+        let itemPrice1 = getCart()[cart.length-1][itemName1]
         cartlist = cartlist + " " + itemName1 + " at $" + itemPrice1 + "."
   } else {
       for (var i=0; i<cart.length-2; i++) {
@@ -42,7 +42,7 @@ function viewCart() {
       let itemPrice = getCart()[cart.length-2][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + ", and"
       let itemName1 = Object.keys(getCart()[cart.length-1])[0]
-      let itemPrice1 = getCart()[cart.length-1][itemName]
+      let itemPrice1 = getCart()[cart.length-1][itemName1]
       cartlist = cartlist + " " + itemName1 + " at $" + itemPrice1 + "."
   }
     console.log("In your cart, you have" + cartlist)
