@@ -28,7 +28,7 @@ function viewCart() {
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
   } else {
     var cartlist = ""
-    if cart.length ===2) {
+    if (cart.length ===2) {
       let itemName = Object.keys(getCart()[cart.length-2])[0]
       let itemPrice = getCart()[cart.length-2][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + " and"
