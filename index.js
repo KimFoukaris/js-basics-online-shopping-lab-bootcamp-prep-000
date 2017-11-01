@@ -26,6 +26,7 @@ function viewCart() {
       let itemName = Object.keys(getCart()[cart.length-1])[0]
       let itemPrice = getCart()[cart.length-1][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
+    }
   } else {
     var cartlist = ""
     if (cart.length ===2) {
@@ -35,7 +36,8 @@ function viewCart() {
       let itemName = Object.keys(getCart()[cart.length-1])[0]
       let itemPrice = getCart()[cart.length-1][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
-    } else
+    }
+  } else {
     var cartlist = ""
     for (var i=0; i<cart.length-2; i++) {
       let itemName = Object.keys(getCart()[i])[0]
@@ -49,6 +51,7 @@ function viewCart() {
       let itemPrice = getCart()[cart.length-1][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + "."
     console.log("In your cart, you have" + cartlist)
+  }
 }
 
 function total() {
