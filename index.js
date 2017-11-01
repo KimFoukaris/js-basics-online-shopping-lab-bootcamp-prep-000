@@ -37,7 +37,7 @@ function viewCart() {
       let itemName = Object.keys(getCart()[i])[0]
       let itemPrice = getCart()[i][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + ","
-      } 
+      }
       let itemName = Object.keys(getCart()[cart.length-2])[0]
       let itemPrice = getCart()[cart.length-2][itemName]
       cartlist = cartlist + " " + itemName + " at $" + itemPrice + ", and"
